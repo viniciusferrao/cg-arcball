@@ -1,0 +1,11 @@
+/* Remove all margins to get a full screen canvas with black background */
+html, body {
+	overflow: hidden;
+}
+
+body {
+	font-family: Monospace;
+	background-color: #000000;
+	margin: 0px;
+	padding: 0px;
+}
