@@ -1,5 +1,7 @@
-/* 
- * Helper functions 
+/* Helper functions:
+ * getIntersections();
+ * getArcballClickPosition();
+ * arcballSelectorHelper();
  */
 
 function getIntersections(x, y) {

@@ -4,7 +4,7 @@
  */
 
 /* Define here the variables for changing appearence */ 
-var numberOfObjects = 5; /* Number of objects on the screen */
+var numberOfObjects = 10; /* Number of objects on the screen */
 var backgroundColor = 0x000000; /* Background color */
 var arcballColor = 0x808080 /* Arcball color */
 
@@ -178,12 +178,14 @@ function onDocumentMouseMove(event) {
 	} else {
 		if (selectedObject) {
 			let arcballCenter = arcball.position;
+			vector.unproject(camera);
+
 			let lastClickPointPosition = getArcballClickPosition(vector, plane, arcball);
 			let tempLastClickPointPosition = new THREE.Vector3().copy(lastClickPointPosition);
 			let tempFirstClickPointPosition = new THREE.Vector3().copy(firstClickPointPosition);
 			let normal = new THREE.Vector3();
 
-			vector.unproject(camera);
+			
 			tempLastClickPointPosition.sub(arcballCenter);
 			tempFirstClickPointPosition.sub(arcballCenter);
 
